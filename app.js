@@ -63,6 +63,7 @@ let initializeButtons = function () {
 
 let initiliazeBoard = function () {
     const gamesquare = document.getElementsByClassName('gamesquare');
+    const display = document.querySelector('.display');
     var clickedSquare;
     let counter = 0
     for (let i = 0; i < gamesquare.length; i++)
@@ -93,10 +94,10 @@ let initiliazeBoard = function () {
             console.log(counter)
             console.log(playerTurn)
             if (gameOver === true) {
-                alert('gameover')
+                display.textContent = `${playerTurn} wins! Click here to restart.`
             } else if (counter == 9) {
-                alert('tie');
                 gameOver = true;
+                display.textContent = 'Tie! Click here to restart.'
             } else if (gameOver === false) {
                 playerTurn = (playerTurn == player1) ? player2 : player1;
             }    
