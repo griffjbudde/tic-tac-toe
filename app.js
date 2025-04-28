@@ -2,7 +2,7 @@ let getPlayers = function () {
     player1 = prompt("Please enter the name of player one.")
     player2 = prompt("Please enter the name of player two.")
     return player1, player2;
-}();
+};
 
 let makeGameboard = function () {
     gameboard = {
@@ -82,4 +82,4 @@ let game = function () {
     while (gameOver === false) {
         playRound();
     }
-}();
+};
