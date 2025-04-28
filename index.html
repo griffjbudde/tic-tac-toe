@@ -7,25 +7,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barrio&display=swap" rel="stylesheet">
-    <script src="./app.js"></script>
+    <script src="./app.js" defer></script>
     <title>Tic-Tac-Toe</title>
 </head>
 <body>
     <header>
         <h1>Tic-Tac-Toe</h1>
-        <div>New Game</div>
+        <div id="new-button">New Game</div>
     </header>
+    <div id="blocker"></div>
     <div class="grid-container">
-        <div id="a1"></div>
-        <div id="a2"></div>
-        <div id="a3"></div>
-        <div id="b1"></div>
-        <div id="b2"></div>
-        <div id="b3"></div>
-        <div id="c1"></div>
-        <div id="c2"></div>
-        <div id="c3"></div>
+        <div id="a1" class="gamesquare"></div>
+        <div id="a2" class="gamesquare"></div>
+        <div id="a3" class="gamesquare"></div>
+        <div id="b1" class="gamesquare"></div>
+        <div id="b2" class="gamesquare"></div>
+        <div id="b3" class="gamesquare"></div>
+        <div id="c1" class="gamesquare"></div>
+        <div id="c2" class="gamesquare"></div>
+        <div id="c3" class="gamesquare"></div>
     </div>
-    
+    <div class="modal">
+        <div class="modal-content">
+            <h2>Please enter player names</h2>
+            <label for="player-one">Player One:<input type="text" id="player-one" name="player-one"> X</label>
+            <label for="player-two">Player Two:<input type="text" id="player-two" name="player-two"> o</label>
+            <div id="start-game-button">Start Game</div>
+        </div>
+    </div> 
 </body>
 </html>
